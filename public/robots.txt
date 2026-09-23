@@ -1,0 +1,8 @@
+# User-Agent Rules for Passionate Cooling & Heating LLC
+# https://passionatehvaclv.com
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://passionatehvaclv.com/sitemap.xml

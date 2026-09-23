@@ -1,5 +1,6 @@
 # Passionate Cooling & Heating LLC — Web Application & AEO Platform
 
+[![CI Build & Verify](https://github.com/mandraxor/passionate-cooling-and-heating/actions/workflows/ci.yml/badge.svg)](https://github.com/mandraxor/passionate-cooling-and-heating/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.x-61dafb.svg?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646cff.svg?logo=vite)](https://vitejs.dev/)

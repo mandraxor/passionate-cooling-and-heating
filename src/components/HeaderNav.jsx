@@ -28,31 +28,31 @@ export default function HeaderNav({ onOpenBookingModal }) {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#07152b] border-b border-slate-800 shadow-xl">
       {/* 1. TOP EMERGENCY BROADCAST TICKER - FLUID WIDE SPREAD */}
-      <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-800 text-white px-4 sm:px-6 lg:px-10 py-1.5 text-xs font-semibold border-b border-red-800/50">
+      <div className="bg-gradient-to-r from-sky-800 via-sky-600 to-blue-800 text-white px-4 sm:px-6 lg:px-10 py-1.5 text-xs font-semibold border-b border-sky-600/40">
         <div className="w-full max-w-[1800px] mx-auto flex items-center justify-between gap-4">
           
           {/* Left: Emergency Status */}
           <div className="flex items-center gap-2.5 truncate">
             <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-80"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
             </span>
-            <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs text-white truncate">
-              🚨 24/7/365 EMERGENCY DISPATCH ACTIVE
+            <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs text-white truncate flex items-center gap-1.5">
+              <span>❄️ 24/7/365 EMERGENCY COOLING DISPATCH ACTIVE</span>
             </span>
-            <span className="hidden md:inline text-red-200">•</span>
-            <span className="hidden md:inline text-red-100 font-medium text-[11px]">
+            <span className="hidden md:inline text-sky-200">•</span>
+            <span className="hidden md:inline text-sky-100 font-medium text-[11px]">
               45-Minute Average Response Time Across All Clark County
             </span>
           </div>
 
           {/* Right: Badges & Hotline spread out */}
-          <div className="hidden lg:flex items-center gap-6 text-[11px] font-bold text-red-100 flex-shrink-0">
-            <span className="flex items-center gap-1.5 bg-red-950/40 px-2.5 py-0.5 rounded-full border border-red-500/30">
+          <div className="hidden lg:flex items-center gap-6 text-[11px] font-bold text-sky-100 flex-shrink-0">
+            <span className="flex items-center gap-1.5 bg-sky-950/60 px-2.5 py-0.5 rounded-full border border-sky-400/30">
               <Award className="w-3.5 h-3.5 text-amber-300" />
               <span>NV License #0088935</span>
             </span>
-            <span className="flex items-center gap-1.5 bg-red-950/40 px-2.5 py-0.5 rounded-full border border-red-500/30">
+            <span className="flex items-center gap-1.5 bg-sky-950/60 px-2.5 py-0.5 rounded-full border border-sky-400/30">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
               <span>EPA 608 Universal Certified</span>
             </span>
@@ -62,7 +62,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
             </span>
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="bg-white hover:bg-red-50 text-red-700 font-black px-3 py-0.5 rounded-full transition-all shadow-sm"
+              className="bg-white hover:bg-sky-50 text-sky-800 font-black px-3 py-0.5 rounded-full transition-all shadow-sm"
             >
               Direct: {BUSINESS_INFO.phone}
             </a>
@@ -76,10 +76,10 @@ export default function HeaderNav({ onOpenBookingModal }) {
           
           {/* Left: Logo & Brand Identity (Anchored firmly on Left) */}
           <Link to="/" className="flex items-center gap-3.5 group flex-shrink-0">
-            <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-blue-600 p-0.5 shadow-lg shadow-red-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
+            <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-400 via-blue-600 to-cyan-400 p-0.5 shadow-lg shadow-sky-500/25 group-hover:scale-105 transition-transform flex-shrink-0">
               <div className="w-full h-full bg-[#07152b] rounded-[14px] flex items-center justify-center relative overflow-hidden">
-                <Flame className="w-6 h-6 text-red-500 absolute -bottom-1 -left-1" />
-                <Snowflake className="w-5 h-5 text-sky-400 absolute -top-0.5 -right-0.5" />
+                <Flame className="w-5 h-5 text-amber-400 absolute -bottom-0.5 -left-0.5 opacity-80" />
+                <Snowflake className="w-6 h-6 text-sky-400 absolute -top-0.5 -right-0.5 animate-pulse" />
               </div>
             </div>
 
@@ -88,7 +88,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
                 <span className="text-xl sm:text-2xl font-black tracking-tight text-white uppercase">
                   Passionate
                 </span>
-                <span className="text-[11px] font-black uppercase text-red-400 bg-red-950/80 px-2 py-0.5 rounded-md border border-red-800 tracking-wider">
+                <span className="text-[11px] font-black uppercase text-sky-300 bg-sky-950/80 px-2 py-0.5 rounded-md border border-sky-700 tracking-wider">
                   HVAC & PLUMBING
                 </span>
               </div>
@@ -128,7 +128,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
                 }`}
               >
                 <span>Full Catalog</span>
-                <span className="text-[10px] bg-red-600/90 text-white font-extrabold px-1.5 py-0.2 rounded-full">
+                <span className="text-[10px] bg-sky-600 text-white font-extrabold px-1.5 py-0.2 rounded-full">
                   17 Services
                 </span>
                 <ChevronDown className="w-4 h-4 text-slate-400" />
@@ -147,7 +147,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div>
-                        <div className="font-bold text-white group-hover:text-red-400 transition-colors">{cat.name}</div>
+                        <div className="font-bold text-white group-hover:text-cyan-300 transition-colors">{cat.name}</div>
                         <div className="text-[10px] text-slate-400">{cat.count} Master Offerings</div>
                       </div>
                       <span className="text-[10px] font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded">
@@ -229,13 +229,13 @@ export default function HeaderNav({ onOpenBookingModal }) {
             {/* Phone Number Callout with 24/7 pulse */}
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="inline-flex items-center gap-2.5 bg-slate-900/90 hover:bg-slate-800 text-white font-black text-sm px-4 py-2.5 rounded-xl border border-slate-700/80 shadow-sm transition-all hover:border-red-500/50 group"
+              className="inline-flex items-center gap-2.5 bg-slate-900/90 hover:bg-slate-800 text-white font-black text-sm px-4 py-2.5 rounded-xl border border-slate-700/80 shadow-sm transition-all hover:border-sky-400/60 group"
             >
               <div className="relative flex h-2.5 w-2.5 flex-shrink-0">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-sky-500"></span>
               </div>
-              <Phone className="w-4 h-4 text-red-500 fill-red-500 group-hover:rotate-12 transition-transform" />
+              <Phone className="w-4 h-4 text-sky-400 fill-sky-400 group-hover:rotate-12 transition-transform" />
               <span>(702) 858-1211</span>
             </a>
 
@@ -245,14 +245,14 @@ export default function HeaderNav({ onOpenBookingModal }) {
               className="inline-flex items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white font-bold text-xs px-3.5 py-2.5 rounded-xl border border-slate-700/80 transition-colors"
               title="Send text message to dispatch"
             >
-              <MessageSquare className="w-4 h-4 text-sky-400" />
+              <MessageSquare className="w-4 h-4 text-cyan-400" />
               <span>SMS</span>
             </a>
 
             {/* Request Service / Free Quote Button */}
             <button
               onClick={() => onOpenBookingModal()}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 active:scale-95 text-white font-black text-sm px-5 xl:px-6 py-2.5 rounded-xl shadow-lg shadow-red-950/40 transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 active:scale-95 text-white font-black text-sm px-5 xl:px-6 py-2.5 rounded-xl shadow-lg shadow-sky-950/40 transition-all"
             >
               <Calendar className="w-4 h-4" />
               <span>Free Quote / Book</span>
@@ -263,7 +263,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
           <div className="flex lg:hidden items-center gap-2">
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="p-2.5 rounded-xl bg-red-600 text-white shadow-md"
+              className="p-2.5 rounded-xl bg-sky-600 text-white shadow-md"
               aria-label="Call Now"
             >
               <Phone className="w-4 h-4 fill-white" />
@@ -286,7 +286,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
           <div className="grid grid-cols-2 gap-2 pb-2">
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center justify-center gap-2 bg-red-600 text-white font-extrabold text-sm py-3 rounded-xl shadow-md"
+              className="flex items-center justify-center gap-2 bg-sky-600 text-white font-extrabold text-sm py-3 rounded-xl shadow-md"
             >
               <Phone className="w-4 h-4 fill-white" />
               <span>Call (702) 858-1211</span>
@@ -295,7 +295,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
               href={BUSINESS_INFO.smsUrl}
               className="flex items-center justify-center gap-2 bg-slate-800 text-slate-200 font-bold text-sm py-3 rounded-xl border border-slate-700"
             >
-              <MessageSquare className="w-4 h-4 text-sky-400" />
+              <MessageSquare className="w-4 h-4 text-cyan-400" />
               <span>Text Us</span>
             </a>
           </div>
@@ -339,7 +339,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
             <Link
               to="/knowledge-base"
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white text-red-400 font-extrabold"
+              className="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white text-sky-400 font-extrabold"
             >
               Knowledge Base & 115°F Diagnostics
             </Link>
@@ -358,7 +358,7 @@ export default function HeaderNav({ onOpenBookingModal }) {
                 setMobileMenuOpen(false);
                 onOpenBookingModal();
               }}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white font-black text-sm py-3.5 rounded-xl shadow-lg"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-sm py-3.5 rounded-xl shadow-lg"
             >
               <Calendar className="w-4 h-4" />
               <span>Request Emergency Service / Free Quote</span>

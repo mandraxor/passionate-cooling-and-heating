@@ -6,7 +6,7 @@ export const BLOG_POSTS = [
     publishDate: "2026-08-15",
     readTime: "6 min read",
     category: "AC Diagnostics & Repair",
-    categoryBadgeColor: "bg-red-50 text-red-700 border-red-200",
+    categoryBadgeColor: "bg-sky-50 text-sky-700 border-sky-200",
     coverImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80",
     author: {
       name: "Jason Curtis Roden",

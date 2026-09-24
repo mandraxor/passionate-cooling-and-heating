@@ -21,8 +21,8 @@ export default function HeroSection({ onOpenBookingModal }) {
     <section className="relative overflow-hidden bg-[#07152b] text-white pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-slate-800">
       {/* Background Gradients & Heat vs Cool Glow */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-10 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-10 w-96 h-96 bg-sky-500/25 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
       </div>
 
@@ -43,20 +43,20 @@ export default function HeroSection({ onOpenBookingModal }) {
               <span className="text-slate-500">•</span>
               <span>200+ Verified Google Reviews</span>
               <span className="text-slate-500">•</span>
-              <span className="text-red-400 font-bold">Lic. #0088935</span>
+              <span className="text-sky-400 font-bold">Lic. #0088935</span>
             </div>
 
             {/* Branding Slogan & Powerful Headline */}
             <div>
-              <p className="text-xs sm:text-sm font-black tracking-widest uppercase text-red-500 mb-2 flex items-center justify-center lg:justify-start gap-2">
-                <Flame className="w-4 h-4 text-red-500 inline" />
+              <p className="text-xs sm:text-sm font-black tracking-widest uppercase text-sky-400 mb-2 flex items-center justify-center lg:justify-start gap-2">
+                <Snowflake className="w-4 h-4 text-cyan-300 inline" />
                 <span>{BUSINESS_INFO.slogan}</span>
-                <Snowflake className="w-4 h-4 text-sky-400 inline" />
+                <Flame className="w-3.5 h-3.5 text-amber-400 inline opacity-75" />
               </p>
               
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
                 Las Vegas's Elite{' '}
-                <span className="bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
                   24/7 HVAC & Plumbing
                 </span>{' '}
                 Emergency Rescue.
@@ -65,7 +65,7 @@ export default function HeroSection({ onOpenBookingModal }) {
 
             {/* Value Proposition Description */}
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              When Nevada temperatures surge past <strong className="text-white font-bold">115°F</strong>, every minute counts. Passionate Cooling & Heating delivers master-level climate repair and tankless plumbing with a <strong className="text-red-400 font-bold">45-minute average emergency dispatch</strong>, 100% upfront flat-rate pricing, and family-owned integrity.
+              When Nevada temperatures surge past <strong className="text-white font-bold">115°F</strong>, every minute counts. Passionate Cooling & Heating delivers master-level climate repair and tankless plumbing with a <strong className="text-sky-300 font-bold">45-minute average emergency dispatch</strong>, 100% upfront flat-rate pricing, and family-owned integrity.
             </p>
 
             {/* Instant Action Triggers: Call, SMS, Free Quote */}
@@ -73,10 +73,10 @@ export default function HeroSection({ onOpenBookingModal }) {
               {/* Direct Click to Call */}
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-black text-base px-8 py-3.5 rounded-xl shadow-xl shadow-red-950/50 transition-all duration-200 active:scale-95 group"
+                className="w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 active:from-sky-600 active:to-blue-700 text-white font-black text-base px-8 py-3.5 rounded-xl shadow-xl shadow-sky-950/50 transition-all duration-200 active:scale-95 group"
               >
                 <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                 </div>
                 <Phone className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" />
@@ -86,11 +86,11 @@ export default function HeroSection({ onOpenBookingModal }) {
               {/* Instant Request Modal */}
               <button
                 onClick={() => onOpenBookingModal()}
-                className="w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-extrabold text-base px-7 py-3.5 rounded-xl shadow-lg transition-all duration-200 active:scale-95"
+                className="w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-2.5 bg-slate-900/90 hover:bg-slate-800 text-white border border-sky-500/50 hover:border-sky-400 font-extrabold text-base px-7 py-3.5 rounded-xl shadow-lg transition-all duration-200 active:scale-95"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-5 h-5 text-sky-400" />
                 <span>Book Service / Free Quote</span>
-                <ArrowRight className="w-4 h-4 text-sky-200" />
+                <ArrowRight className="w-4 h-4 text-sky-300" />
               </button>
 
               {/* Direct SMS Button */}
@@ -99,7 +99,7 @@ export default function HeroSection({ onOpenBookingModal }) {
                 className="w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-sm px-5 py-3.5 rounded-xl border border-slate-700 transition-colors"
                 title="Send an instant SMS to on-call technician"
               >
-                <MessageSquare className="w-4 h-4 text-sky-400" />
+                <MessageSquare className="w-4 h-4 text-cyan-400" />
                 <span>SMS Dispatch</span>
               </a>
             </div>
@@ -160,10 +160,10 @@ export default function HeroSection({ onOpenBookingModal }) {
               </div>
 
               {/* Floating Badge Top-Left: Emergency Alert */}
-              <div className="absolute -top-5 -left-4 sm:-left-6 bg-red-600 text-white p-3 rounded-xl border border-red-400/50 shadow-xl hidden sm:flex items-center gap-3 animate-bounce-subtle">
+              <div className="absolute -top-5 -left-4 sm:-left-6 bg-gradient-to-r from-sky-600 to-blue-700 text-white p-3 rounded-xl border border-cyan-400/40 shadow-xl shadow-sky-950/40 hidden sm:flex items-center gap-3 animate-bounce-subtle">
                 <Clock className="w-5 h-5 text-white" />
                 <div>
-                  <div className="text-[10px] font-black uppercase tracking-wider text-red-200">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-cyan-200">
                     24/7/365 On-Call
                   </div>
                   <div className="text-xs font-black">
@@ -210,8 +210,8 @@ export default function HeroSection({ onOpenBookingModal }) {
 
             {/* Badge 2: Licensed & Insured */}
             <div className="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
-              <div className="flex items-center justify-center gap-1 text-red-400 font-black text-lg sm:text-xl">
-                <Award className="w-5 h-5 text-red-400" />
+              <div className="flex items-center justify-center gap-1 text-sky-400 font-black text-lg sm:text-xl">
+                <Award className="w-5 h-5 text-sky-400" />
                 <span>#0088935</span>
               </div>
               <div className="text-xs font-bold text-white mt-0.5">NV State Contractors Board</div>

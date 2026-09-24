@@ -53,8 +53,8 @@ export default function AEOQuestionAnswer({
         
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-red-600" />
+          <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 text-sky-800 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-3 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-sky-600" />
             <span>Answer Engine Optimized (AEO) Knowledge Module</span>
           </div>
 
@@ -77,7 +77,7 @@ export default function AEOQuestionAnswer({
             return (
               <article
                 key={item.id || idx}
-                className="bg-slate-50/70 border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm hover:border-slate-300"
+                className="bg-slate-50/70 border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm hover:border-sky-300"
               >
                 {/* Question Trigger (H3 with H2 context) */}
                 <button
@@ -87,7 +87,7 @@ export default function AEOQuestionAnswer({
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-start gap-3">
-                    <span className="w-6 h-6 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-black text-xs flex-shrink-0 mt-0.5">
+                    <span className="w-6 h-6 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-black text-xs flex-shrink-0 mt-0.5">
                       Q{idx + 1}
                     </span>
                     <h3 className="text-base sm:text-lg font-black text-[#07152b] leading-snug">
@@ -105,8 +105,8 @@ export default function AEOQuestionAnswer({
                   <div className="px-5 sm:px-6 pb-6 pt-1 space-y-5 animate-in fade-in duration-200">
                     
                     {/* INVERTED PYRAMID DIRECT ANSWER BLOCK (40–60 words) */}
-                    <div className="bg-white border-l-4 border-red-600 p-4 sm:p-5 rounded-r-xl shadow-sm border border-y-slate-200 border-r-slate-200">
-                      <div className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-red-700 mb-1.5">
+                    <div className="bg-white border-l-4 border-sky-500 p-4 sm:p-5 rounded-r-xl shadow-sm border border-y-slate-200 border-r-slate-200">
+                      <div className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-sky-700 mb-1.5">
                         <Info className="w-3.5 h-3.5" />
                         <span>Direct Quick Answer (Verified Fact Summary):</span>
                       </div>

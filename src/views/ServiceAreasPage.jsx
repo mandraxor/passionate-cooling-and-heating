@@ -10,7 +10,7 @@ export default function ServiceAreasPage() {
       {/* Header */}
       <section className="bg-[#07152b] text-white py-14 sm:py-20 border-b border-slate-800 text-center relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-black uppercase tracking-wider text-red-400 bg-red-950/80 px-4 py-1.5 rounded-full border border-red-800 mb-4 inline-block">
+          <span className="text-xs font-black uppercase tracking-wider text-sky-300 bg-sky-950/80 px-4 py-1.5 rounded-full border border-sky-800 mb-4 inline-block">
             Southern Nevada Dispatch Network
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">

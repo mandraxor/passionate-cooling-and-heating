@@ -59,8 +59,8 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
       {/* HERO SECTION */}
       <section className="relative bg-[#07152b] text-white pt-12 pb-20 overflow-hidden">
         {/* Subtle background glow */}
-        <div className="absolute inset-0 opacity-15 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-10 w-80 h-80 bg-sky-600 rounded-full blur-3xl"></div>
         </div>
 
@@ -68,8 +68,8 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
           <div className="max-w-3xl">
             
             {/* Urgent Dispatch Badge */}
-            <div className="inline-flex items-center gap-2 bg-red-600/90 hover:bg-red-600 text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider mb-6 shadow-lg shadow-red-900/40">
-              <span className="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider mb-6 shadow-lg shadow-sky-950/40 border border-cyan-400/30">
+              <span className="w-2.5 h-2.5 rounded-full bg-cyan-300 animate-ping"></span>
               <span>{location.heroBadge}</span>
             </div>
 
@@ -87,7 +87,7 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-black px-7 py-4 rounded-xl text-lg shadow-xl shadow-red-600/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black px-7 py-4 rounded-xl text-lg shadow-xl shadow-sky-950/50 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Phone className="w-6 h-6 animate-bounce" />
                 <span>Call {BUSINESS_INFO.phone}</span>
@@ -98,7 +98,7 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
                 onClick={() => onOpenBookingModal?.(`Emergency AC Service - ${location.city}`)}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur font-bold px-6 py-4 rounded-xl text-base transition-colors"
               >
-                <Calendar className="w-5 h-5 text-red-400" />
+                <Calendar className="w-5 h-5 text-cyan-300" />
                 <span>Book Priority Dispatch ($0 Diagnostic*)</span>
               </button>
             </div>
@@ -134,9 +134,9 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
             {location.serviceHighlights.map((highlight, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-300 transition-all hover:shadow-md flex items-start gap-3.5"
+                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-sky-300 transition-all hover:shadow-md flex items-start gap-3.5"
               >
-                <div className="w-8 h-8 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-black text-sm flex-shrink-0 mt-0.5">
                   ✓
                 </div>
                 <p className="text-sm font-bold text-slate-800 leading-snug">
@@ -169,8 +169,8 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
 
               <div className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">
-                  <div className="p-1.5 rounded-lg bg-red-50 text-red-600 mt-0.5">
-                    <Flame className="w-4 h-4" />
+                  <div className="p-1.5 rounded-lg bg-sky-50 text-sky-600 mt-0.5">
+                    <Flame className="w-4 h-4 text-amber-500" />
                   </div>
                   <div className="text-sm text-slate-700">
                     <strong className="text-slate-900">Extreme Heat Thermal Stress:</strong> Rooftop and ground condensers routinely cycle at 125°F+ ambient coil temperatures, demanding heavy-duty 440V American-made run capacitors and contactors.
@@ -191,8 +191,8 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
             {/* Local Technician Dispatch Card */}
             <div className="lg:col-span-5 bg-gradient-to-br from-[#07152b] to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl">
               <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
-                <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-red-400">
-                  <Zap className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
+                <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-cyan-400">
+                  <Zap className="w-4 h-4 text-cyan-400 fill-cyan-400 animate-pulse" />
                   <span>Fleet Dispatch Status</span>
                 </div>
                 <span className="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-0.5 rounded-full font-bold">
@@ -210,7 +210,7 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
                     key={idx}
                     className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-200 border border-white/15"
                   >
-                    <Wrench className="w-3 h-3 text-red-400" />
+                    <Wrench className="w-3 h-3 text-sky-400" />
                     <span>{tech}</span>
                   </span>
                 ))}
@@ -240,7 +240,7 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
               <div className="mt-6 pt-4 border-t border-white/10">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl text-sm transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold py-3 rounded-xl text-sm transition-colors shadow-lg shadow-sky-950/40"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call {location.city} Dispatch Hotline</span>
@@ -270,13 +270,13 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
             {/* Key Landmarks */}
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
               <h3 className="text-base font-black text-[#07152b] mb-4 flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-red-600" />
+                <MapPin className="w-4 h-4 text-sky-500" />
                 <span>Key Communities & Neighborhoods:</span>
               </h3>
               <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm">
                 {location.landmarks.map((landmark, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-slate-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
                     <span>{landmark}</span>
                   </div>
                 ))}
@@ -336,17 +336,17 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
               <Link
                 key={sib.slug}
                 to={`/locations/${sib.slug}`}
-                className="group bg-white p-4 rounded-xl border border-slate-200 hover:border-red-500 hover:shadow-md transition-all text-center flex flex-col justify-between"
+                className="group bg-white p-4 rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition-all text-center flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="font-extrabold text-sm text-[#07152b] group-hover:text-red-600 transition-colors">
+                  <h3 className="font-extrabold text-sm text-[#07152b] group-hover:text-sky-600 transition-colors">
                     {sib.city}, NV
                   </h3>
                   <p className="text-[11px] text-slate-500 mt-1 line-clamp-1">
                     {sib.heroBadge.replace(/🚨|🎯|⚡|🌵|🏔️/, '').trim()}
                   </p>
                 </div>
-                <div className="mt-3 flex items-center justify-center gap-1 text-[11px] font-black text-red-600 group-hover:translate-x-0.5 transition-transform">
+                <div className="mt-3 flex items-center justify-center gap-1 text-[11px] font-black text-sky-600 group-hover:translate-x-0.5 transition-transform">
                   <span>View Hub</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </div>
@@ -368,7 +368,7 @@ export default function LocationLandingPage({ onOpenBookingModal }) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black px-8 py-4 rounded-xl text-lg shadow-xl shadow-red-900/50 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black px-8 py-4 rounded-xl text-lg shadow-xl shadow-sky-900/50 transition-all hover:scale-105"
             >
               <Phone className="w-5 h-5 animate-pulse" />
               <span>Call (702) 858-1211</span>

@@ -16,7 +16,7 @@ export const SERVICE_CATEGORIES = [
     tagline: "Safe, rapid warmth when freezing desert winter nights sweep Clark County",
     icon: "Flame",
     count: 4,
-    color: "from-red-500 to-rose-600",
+    color: "from-amber-500 to-orange-600",
     badge: "Certified Gas & Heat Pump"
   },
   {

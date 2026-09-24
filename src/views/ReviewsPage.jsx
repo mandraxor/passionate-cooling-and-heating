@@ -70,7 +70,7 @@ export default function ReviewsPage() {
                   href={BUSINESS_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700 underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-sky-700 underline"
                 >
                   <span>Verify Directly on Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -121,7 +121,7 @@ export default function ReviewsPage() {
               onClick={() => setSelectedTech(tech)}
               className={`text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-all ${
                 selectedTech === tech
-                  ? 'bg-red-600 text-white shadow-sm'
+                  ? 'bg-sky-600 text-white shadow-sm'
                   : 'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200'
               }`}
             >
@@ -150,8 +150,8 @@ export default function ReviewsPage() {
                 </div>
 
                 <div className="mb-3">
-                  <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
-                    <ThermometerSnowflake className="w-3 h-3 text-red-600" />
+                  <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">
+                    <ThermometerSnowflake className="w-3 h-3 text-sky-600" />
                     <span>{rev.temperatureContext}</span>
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export default function ReviewsPage() {
 
                 <div className="text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-bold block">Tech:</span>
-                  <span className="text-xs font-black text-red-600">{rev.technician}</span>
+                  <span className="text-xs font-black text-sky-600">{rev.technician}</span>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function ReviewsPage() {
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setIsBookingOpen(true)}
-              className="bg-red-600 hover:bg-red-700 text-white font-black text-sm px-6 py-3.5 rounded-xl shadow-md transition-all"
+              className="bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm px-6 py-3.5 rounded-xl shadow-md transition-all active:scale-95"
             >
               Book Service / Request Estimate
             </button>
@@ -207,7 +207,7 @@ export default function ReviewsPage() {
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
               className="bg-[#07152b] hover:bg-slate-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-colors flex items-center gap-2"
             >
-              <Phone className="w-4 h-4 text-red-500 fill-red-500" />
+              <Phone className="w-4 h-4 text-sky-400 fill-sky-400" />
               <span>Call (702) 858-1211</span>
             </a>
           </div>

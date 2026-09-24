@@ -97,7 +97,7 @@ export default function TechnicianReviewCarousel() {
             {/* Middle Stats Block */}
             <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
-                <div className="text-2xl font-black text-red-500">45-Min</div>
+                <div className="text-2xl font-black text-sky-400">45-Min</div>
                 <div className="text-xs font-semibold text-slate-300 mt-1">Avg Emergency Arrival</div>
                 <div className="text-[10px] text-slate-400">During 115°F Heatwaves</div>
               </div>
@@ -141,7 +141,7 @@ export default function TechnicianReviewCarousel() {
                 }}
                 className={`text-xs font-bold px-3.5 py-1.5 rounded-lg transition-all ${
                   selectedTech === tech
-                    ? 'bg-red-600 text-white shadow-sm'
+                    ? 'bg-sky-600 text-white shadow-sm'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
@@ -199,8 +199,8 @@ export default function TechnicianReviewCarousel() {
 
                 {/* Weather Context Tag (e.g. 114°F Heatwave) */}
                 <div className="mb-3">
-                  <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded">
-                    <ThermometerSnowflake className="w-3 h-3 text-red-600" />
+                  <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">
+                    <ThermometerSnowflake className="w-3 h-3 text-sky-600" />
                     <span>{rev.temperatureContext}</span>
                   </span>
                 </div>
@@ -240,7 +240,7 @@ export default function TechnicianReviewCarousel() {
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
                     Assigned Tech:
                   </span>
-                  <span className="text-xs font-black text-red-600">
+                  <span className="text-xs font-black text-sky-600">
                     {rev.technician}
                   </span>
                 </div>
@@ -259,7 +259,7 @@ export default function TechnicianReviewCarousel() {
                 setSelectedTech('All');
                 setSelectedCategory('All');
               }}
-              className="mt-2 text-xs font-bold text-red-600 hover:underline"
+              className="mt-2 text-xs font-bold text-sky-600 hover:underline"
             >
               Reset filters to show all reviews
             </button>

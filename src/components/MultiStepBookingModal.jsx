@@ -111,10 +111,10 @@ export default function MultiStepBookingModal({
 
           <div className="flex items-center gap-2 mb-1.5">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
             </span>
-            <span className="text-[11px] font-black uppercase tracking-wider text-red-400">
+            <span className="text-[11px] font-black uppercase tracking-wider text-cyan-300">
               24/7 Live Emergency Dispatch
             </span>
             <span className="text-slate-500 text-xs">•</span>
@@ -131,22 +131,22 @@ export default function MultiStepBookingModal({
           {/* Stepper Progress Bar */}
           {step < 4 && (
             <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-semibold">
-              <div className={`flex items-center gap-1.5 ${step >= 1 ? 'text-red-400' : 'text-slate-500'}`}>
-                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 1 ? 'bg-red-600 text-white' : 'bg-slate-800 text-slate-400'}`}>1</span>
+              <div className={`flex items-center gap-1.5 ${step >= 1 ? 'text-sky-400' : 'text-slate-500'}`}>
+                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 1 ? 'bg-sky-600 text-white' : 'bg-slate-800 text-slate-400'}`}>1</span>
                 <span>Service</span>
               </div>
               <div className="h-0.5 flex-1 mx-2 bg-slate-800">
-                <div className={`h-full bg-red-600 transition-all duration-300 ${step >= 2 ? 'w-full' : 'w-0'}`}></div>
+                <div className={`h-full bg-sky-500 transition-all duration-300 ${step >= 2 ? 'w-full' : 'w-0'}`}></div>
               </div>
-              <div className={`flex items-center gap-1.5 ${step >= 2 ? 'text-red-400' : 'text-slate-500'}`}>
-                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 2 ? 'bg-red-600 text-white' : 'bg-slate-800 text-slate-400'}`}>2</span>
+              <div className={`flex items-center gap-1.5 ${step >= 2 ? 'text-sky-400' : 'text-slate-500'}`}>
+                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 2 ? 'bg-sky-600 text-white' : 'bg-slate-800 text-slate-400'}`}>2</span>
                 <span>Urgency</span>
               </div>
               <div className="h-0.5 flex-1 mx-2 bg-slate-800">
-                <div className={`h-full bg-red-600 transition-all duration-300 ${step >= 3 ? 'w-full' : 'w-0'}`}></div>
+                <div className={`h-full bg-sky-500 transition-all duration-300 ${step >= 3 ? 'w-full' : 'w-0'}`}></div>
               </div>
-              <div className={`flex items-center gap-1.5 ${step >= 3 ? 'text-red-400' : 'text-slate-500'}`}>
-                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 3 ? 'bg-red-600 text-white' : 'bg-slate-800 text-slate-400'}`}>3</span>
+              <div className={`flex items-center gap-1.5 ${step >= 3 ? 'text-sky-400' : 'text-slate-500'}`}>
+                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 3 ? 'bg-sky-600 text-white' : 'bg-slate-800 text-slate-400'}`}>3</span>
                 <span>Details</span>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function MultiStepBookingModal({
                       }}
                       className={`p-3 rounded-xl border text-left transition-all ${
                         selectedCategory === cat.id
-                          ? 'border-red-600 bg-red-50/50 text-[#07152b] ring-2 ring-red-500/20'
+                          ? 'border-sky-500 bg-sky-50/50 text-[#07152b] ring-2 ring-sky-500/20'
                           : 'border-slate-200 hover:border-slate-300 bg-white text-slate-700'
                       }`}
                     >
@@ -196,7 +196,7 @@ export default function MultiStepBookingModal({
                       onClick={() => setSelectedService(srv.name)}
                       className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
                         selectedService === srv.name
-                          ? 'border-red-600 bg-red-50/40 text-[#07152b] ring-1 ring-red-500'
+                          ? 'border-sky-500 bg-sky-50/40 text-[#07152b] ring-1 ring-sky-500'
                           : 'border-slate-200 hover:border-slate-300 bg-white text-slate-700'
                       }`}
                     >
@@ -206,7 +206,7 @@ export default function MultiStepBookingModal({
                       </div>
                       <div className={`w-5 h-5 rounded-full border flex items-center justify-center flex-shrink-0 ${
                         selectedService === srv.name
-                          ? 'border-red-600 bg-red-600 text-white'
+                          ? 'border-sky-600 bg-sky-600 text-white'
                           : 'border-slate-300'
                       }`}>
                         {selectedService === srv.name && <CheckCircle2 className="w-3.5 h-3.5" />}
@@ -220,7 +220,7 @@ export default function MultiStepBookingModal({
                     onClick={() => setSelectedService("Free Second Opinion on Existing Quote / Diagnostic")}
                     className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
                       selectedService === "Free Second Opinion on Existing Quote / Diagnostic"
-                        ? 'border-red-600 bg-red-50/40 text-[#07152b] ring-1 ring-red-500'
+                        ? 'border-sky-500 bg-sky-50/40 text-[#07152b] ring-1 ring-sky-500'
                         : 'border-amber-300 bg-amber-50/50 hover:bg-amber-50 text-slate-700'
                     }`}
                   >
@@ -230,7 +230,7 @@ export default function MultiStepBookingModal({
                     </div>
                     <div className={`w-5 h-5 rounded-full border flex items-center justify-center flex-shrink-0 ${
                       selectedService === "Free Second Opinion on Existing Quote / Diagnostic"
-                        ? 'border-red-600 bg-red-600 text-white'
+                        ? 'border-sky-600 bg-sky-600 text-white'
                         : 'border-amber-400'
                     }`}>
                       {selectedService === "Free Second Opinion on Existing Quote / Diagnostic" && <CheckCircle2 className="w-3.5 h-3.5" />}
@@ -240,12 +240,12 @@ export default function MultiStepBookingModal({
               </div>
 
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs text-slate-500">Need help now? Call <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="font-bold text-red-600 hover:underline">{BUSINESS_INFO.phone}</a></span>
+                <span className="text-xs text-slate-500">Need help now? Call <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="font-bold text-sky-600 hover:underline">{BUSINESS_INFO.phone}</a></span>
                 <button
                   type="button"
                   onClick={handleNextStep}
                   disabled={!selectedService}
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 disabled:opacity-40 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 disabled:opacity-40 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
                 >
                   <span>Next: Choose Urgency</span>
                   <ArrowRight className="w-4 h-4" />
@@ -266,7 +266,7 @@ export default function MultiStepBookingModal({
                   <label
                     className={`block p-4 rounded-xl border cursor-pointer transition-all ${
                       urgency === 'emergency'
-                        ? 'border-red-600 bg-red-50/60 ring-2 ring-red-500/20'
+                        ? 'border-sky-500 bg-sky-50/60 ring-2 ring-sky-500/20'
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
@@ -277,14 +277,14 @@ export default function MultiStepBookingModal({
                         value="emergency"
                         checked={urgency === 'emergency'}
                         onChange={(e) => setUrgency(e.target.value)}
-                        className="mt-1 h-4 w-4 text-red-600 focus:ring-red-500"
+                        className="mt-1 h-4 w-4 text-sky-600 focus:ring-sky-500"
                       />
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-extrabold text-[#07152b]">
                             🚨 Immediate Emergency (45-Minute Target Dispatch)
                           </span>
-                          <span className="bg-red-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">
+                          <span className="bg-sky-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">
                             Urgent Priority
                           </span>
                         </div>
@@ -299,7 +299,7 @@ export default function MultiStepBookingModal({
                   <label
                     className={`block p-4 rounded-xl border cursor-pointer transition-all ${
                       urgency === 'same-day'
-                        ? 'border-red-600 bg-red-50/60 ring-2 ring-red-500/20'
+                        ? 'border-sky-500 bg-sky-50/60 ring-2 ring-sky-500/20'
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
@@ -310,7 +310,7 @@ export default function MultiStepBookingModal({
                         value="same-day"
                         checked={urgency === 'same-day'}
                         onChange={(e) => setUrgency(e.target.value)}
-                        className="mt-1 h-4 w-4 text-red-600 focus:ring-red-500"
+                        className="mt-1 h-4 w-4 text-sky-600 focus:ring-sky-500"
                       />
                       <div>
                         <span className="text-sm font-bold text-[#07152b]">
@@ -327,7 +327,7 @@ export default function MultiStepBookingModal({
                   <label
                     className={`block p-4 rounded-xl border cursor-pointer transition-all ${
                       urgency === 'estimate'
-                        ? 'border-red-600 bg-red-50/60 ring-2 ring-red-500/20'
+                        ? 'border-sky-500 bg-sky-50/60 ring-2 ring-sky-500/20'
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
@@ -338,7 +338,7 @@ export default function MultiStepBookingModal({
                         value="estimate"
                         checked={urgency === 'estimate'}
                         onChange={(e) => setUrgency(e.target.value)}
-                        className="mt-1 h-4 w-4 text-red-600 focus:ring-red-500"
+                        className="mt-1 h-4 w-4 text-sky-600 focus:ring-sky-500"
                       />
                       <div>
                         <span className="text-sm font-bold text-[#07152b]">
@@ -362,7 +362,7 @@ export default function MultiStepBookingModal({
                       type="date"
                       value={preferredDate}
                       onChange={(e) => setPreferredDate(e.target.value)}
-                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -370,7 +370,7 @@ export default function MultiStepBookingModal({
                     <select
                       value={timeWindow}
                       onChange={(e) => setTimeWindow(e.target.value)}
-                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                     >
                       <option value="Morning (8am - 12pm)">Morning (8:00 AM - 12:00 PM)</option>
                       <option value="Afternoon (12pm - 4pm)">Afternoon (12:00 PM - 4:00 PM)</option>
@@ -393,7 +393,7 @@ export default function MultiStepBookingModal({
                 <button
                   type="button"
                   onClick={handleNextStep}
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
                 >
                   <span>Next: Contact & Address</span>
                   <ArrowRight className="w-4 h-4" />
@@ -409,7 +409,7 @@ export default function MultiStepBookingModal({
                 <div>
                   <strong>Selected:</strong> {selectedService}
                 </div>
-                <div className="font-bold text-red-600">
+                <div className="font-bold text-sky-600">
                   {urgency === 'emergency' ? '🚨 45-Min Priority' : 'Standard Routine'}
                 </div>
               </div>
@@ -417,7 +417,7 @@ export default function MultiStepBookingModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1">
-                    Your Name <span className="text-red-600">*</span>
+                    Your Name <span className="text-sky-600">*</span>
                   </label>
                   <input
                     type="text"
@@ -425,13 +425,13 @@ export default function MultiStepBookingModal({
                     placeholder="e.g. John Miller"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1">
-                    Phone Number (for Dispatcher SMS/Call) <span className="text-red-600">*</span>
+                    Phone Number (for Dispatcher SMS/Call) <span className="text-sky-600">*</span>
                   </label>
                   <input
                     type="tel"
@@ -439,7 +439,7 @@ export default function MultiStepBookingModal({
                     placeholder="(702) 858-XXXX"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -454,7 +454,7 @@ export default function MultiStepBookingModal({
                     placeholder="e.g. 6672 Boulder Hwy / Las Vegas or Henderson"
                     value={formData.streetAddress}
                     onChange={(e) => setFormData({ ...formData, streetAddress: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                   />
                 </div>
 
@@ -468,7 +468,7 @@ export default function MultiStepBookingModal({
                     maxLength={5}
                     value={formData.zipCode}
                     onChange={(e) => setFormData({ ...formData, zipCode: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -482,7 +482,7 @@ export default function MultiStepBookingModal({
                   placeholder="e.g. AC fan humming but not spinning, second floor won't drop below 82°, or received quote from another company..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"
                 ></textarea>
               </div>
 
@@ -498,7 +498,7 @@ export default function MultiStepBookingModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm px-7 py-3.5 rounded-xl transition-all shadow-lg active:scale-95 disabled:opacity-50"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-extrabold text-sm px-7 py-3.5 rounded-xl transition-all shadow-lg active:scale-95 disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>
@@ -535,7 +535,7 @@ export default function MultiStepBookingModal({
               <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 max-w-md mx-auto text-left text-xs space-y-2 text-slate-700">
                 <div className="flex justify-between border-b pb-1.5">
                   <span className="text-slate-500">Dispatch Reference:</span>
-                  <span className="font-mono font-black text-red-600">#{confirmedRef}</span>
+                  <span className="font-mono font-black text-sky-600">#{confirmedRef}</span>
                 </div>
                 <div className="flex justify-between border-b pb-1.5">
                   <span className="text-slate-500">Service:</span>
@@ -543,7 +543,7 @@ export default function MultiStepBookingModal({
                 </div>
                 <div className="flex justify-between border-b pb-1.5">
                   <span className="text-slate-500">Priority Tier:</span>
-                  <span className="font-bold text-red-600">{urgency === 'emergency' ? '🚨 45-Min Emergency Priority' : 'Standard Routine'}</span>
+                  <span className="font-bold text-sky-600">{urgency === 'emergency' ? '🚨 45-Min Emergency Priority' : 'Standard Routine'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-500">Location:</span>
@@ -555,7 +555,7 @@ export default function MultiStepBookingModal({
               <div className="pt-2 max-w-md mx-auto space-y-2.5">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="w-full inline-flex items-center justify-center gap-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl shadow-lg transition-all active:scale-95"
+                  className="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl shadow-lg transition-all active:scale-95"
                 >
                   <Phone className="w-4 h-4 fill-white" />
                   <span>Call Dispatch Desk Now: (702) 858-1211</span>

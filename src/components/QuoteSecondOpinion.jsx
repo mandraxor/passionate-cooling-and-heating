@@ -55,11 +55,11 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
           {/* Card 1: Second Opinion Quote Reviewer */}
           <div className="lg:col-span-6 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card-elevated space-y-6">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-red-100 text-red-600 rounded-xl">
+              <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
                 <FileText className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs font-extrabold text-red-600 uppercase">
+                <span className="text-xs font-extrabold text-sky-600 uppercase">
                   100% Free Service
                 </span>
                 <h3 className="text-xl font-black text-[#07152b]">
@@ -93,7 +93,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
             <div className="pt-2">
               <button
                 onClick={() => onOpenBookingModal("Free Second Opinion on Existing Quote / Diagnostic")}
-                className="w-full inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black text-sm py-4 px-6 rounded-xl shadow-md transition-all active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm py-4 px-6 rounded-xl shadow-md transition-all active:scale-95"
               >
                 <span>Request Free 2nd-Opinion Review</span>
                 <ArrowRight className="w-4 h-4" />
@@ -134,7 +134,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                 step="500"
                 value={systemPrice}
                 onChange={(e) => setSystemPrice(Number(e.target.value))}
-                className="w-full accent-red-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-sky-400 h-2 bg-slate-800 rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-slate-500 mt-1">
                 <span>\$3,500 (Single Repair/Mini-Split)</span>
@@ -155,7 +155,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                     onClick={() => setTermMonths(term)}
                     className={`py-2 rounded-xl font-bold transition-all ${
                       termMonths === term
-                        ? 'bg-red-600 text-white'
+                        ? 'bg-sky-600 text-white'
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                     }`}
                   >
@@ -175,7 +175,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                 type="checkbox"
                 checked={rebateApplied}
                 onChange={(e) => setRebateApplied(e.target.checked)}
-                className="h-4 w-4 rounded accent-red-600 cursor-pointer"
+                className="h-4 w-4 rounded accent-sky-500 cursor-pointer"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
               <thead>
                 <tr className="border-b border-slate-200 text-slate-500 uppercase text-[10px] sm:text-xs">
                   <th className="py-3 px-4 font-black">Standard Evaluation Criteria</th>
-                  <th className="py-3 px-4 font-black text-red-600 bg-red-50/60 rounded-t-xl">
+                  <th className="py-3 px-4 font-black text-sky-600 bg-sky-50/60 rounded-t-xl">
                     Passionate Cooling & Heating
                   </th>
                   <th className="py-3 px-4 font-black text-slate-500">Typical Corporate Franchises</th>
@@ -226,7 +226,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                   <td className="py-4 px-4 font-bold text-[#07152b]">
                     Pricing Transparency
                   </td>
-                  <td className="py-4 px-4 bg-red-50/30 font-bold text-slate-900">
+                  <td className="py-4 px-4 bg-sky-50/30 font-bold text-slate-900">
                     <span className="text-emerald-600">✓ Upfront flat-rate quote</span> before any work begins. No surprises.
                   </td>
                   <td className="py-4 px-4 text-slate-500">
@@ -238,7 +238,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                   <td className="py-4 px-4 font-bold text-[#07152b]">
                     Emergency Response (115°F Heat)
                   </td>
-                  <td className="py-4 px-4 bg-red-50/30 font-bold text-slate-900">
+                  <td className="py-4 px-4 bg-sky-50/30 font-bold text-slate-900">
                     <span className="text-emerald-600">✓ 45-minute average dispatch</span> with fully stocked OEM repair trucks.
                   </td>
                   <td className="py-4 px-4 text-slate-500">
@@ -250,7 +250,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                   <td className="py-4 px-4 font-bold text-[#07152b]">
                     Technician Incentives
                   </td>
-                  <td className="py-4 px-4 bg-red-50/30 font-bold text-slate-900">
+                  <td className="py-4 px-4 bg-sky-50/30 font-bold text-slate-900">
                     <span className="text-emerald-600">✓ Salaried master craftsmen</span> focused on fixing components.
                   </td>
                   <td className="py-4 px-4 text-slate-500">
@@ -262,7 +262,7 @@ export default function QuoteSecondOpinion({ onOpenBookingModal }) {
                   <td className="py-4 px-4 font-bold text-[#07152b]">
                     Licensing Breadth
                   </td>
-                  <td className="py-4 px-4 bg-red-50/30 font-bold text-slate-900">
+                  <td className="py-4 px-4 bg-sky-50/30 font-bold text-slate-900">
                     <span className="text-emerald-600">✓ NV Lic. #0088935</span> + General Contractor & Plumbing capability.
                   </td>
                   <td className="py-4 px-4 text-slate-500">

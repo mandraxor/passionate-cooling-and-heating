@@ -95,13 +95,13 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="bg-[#07152b] text-white py-14 sm:py-20 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30 pointer-events-none">
-          <div className="absolute top-0 right-10 w-96 h-96 bg-red-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-10 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-red-400 bg-red-950/80 px-4 py-1.5 rounded-full border border-red-800 mb-4">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          <span className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-sky-300 bg-sky-950/80 px-4 py-1.5 rounded-full border border-sky-800 mb-4">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
             <span>Comprehensive 17-Service Catalog</span>
           </span>
 
@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs font-bold text-slate-300">
             <span className="flex items-center gap-1.5 bg-slate-900 border border-slate-700 px-3.5 py-2 rounded-xl">
-              <Clock className="w-4 h-4 text-red-500" />
+              <Clock className="w-4 h-4 text-sky-400" />
               24/7/365 Emergency Dispatch
             </span>
             <span className="flex items-center gap-1.5 bg-slate-900 border border-slate-700 px-3.5 py-2 rounded-xl">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center gap-1.5 ${
                 selectedCategory === cat.id
-                  ? 'bg-red-600 text-white shadow-sm'
+                  ? 'bg-sky-600 text-white shadow-sm'
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
               }`}
             >
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                 {/* Left: Details */}
                 <div className="lg:col-span-8 space-y-4">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-black uppercase tracking-wider text-red-600 bg-red-50 border border-red-200 px-3 py-1 rounded-full">
+                    <span className="text-xs font-black uppercase tracking-wider text-sky-700 bg-sky-50 border border-sky-200 px-3 py-1 rounded-full">
                       {service.categoryName}
                     </span>
                     <span className="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                   <div className="pt-4 flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
                     <button
                       onClick={() => handleBook(service.name)}
-                      className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
+                      className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm px-6 py-3 rounded-xl transition-all shadow-md active:scale-95"
                     >
                       <span>Book Service / Get Estimate</span>
                       <ArrowRight className="w-4 h-4" />
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                       href={`tel:${BUSINESS_INFO.phoneRaw}`}
                       className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-[#07152b] font-bold text-sm px-5 py-3 rounded-xl border border-slate-300 transition-colors"
                     >
-                      <Phone className="w-4 h-4 text-red-600 fill-red-600" />
+                      <Phone className="w-4 h-4 text-sky-600 fill-sky-600" />
                       <span>Call (702) 858-1211</span>
                     </a>
                   </div>

@@ -80,7 +80,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
 
           {/* Author Badge */}
           <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-            <div className="w-10 h-10 rounded-full bg-red-600 text-white font-black flex items-center justify-center text-sm shadow-md">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black flex items-center justify-center text-sm shadow-md">
               {post.author.name.charAt(0)}
             </div>
             <div>
@@ -107,7 +107,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
               {/* Table of Contents Card */}
               <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
                 <div className="flex items-center gap-2 font-black text-xs uppercase tracking-wider text-slate-600 mb-3 pb-2 border-b border-slate-100">
-                  <Bookmark className="w-4 h-4 text-red-600" />
+                  <Bookmark className="w-4 h-4 text-sky-600" />
                   <span>Table of Contents</span>
                 </div>
                 <nav className="space-y-1.5 text-xs">
@@ -115,7 +115,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className="block p-2 rounded-lg text-slate-700 hover:text-red-600 hover:bg-slate-50 transition-colors font-medium"
+                      className="block p-2 rounded-lg text-slate-700 hover:text-sky-600 hover:bg-slate-50 transition-colors font-medium"
                     >
                       {item.title}
                     </a>
@@ -125,8 +125,8 @@ export default function BlogPostPage({ onOpenBookingModal }) {
 
               {/* Direct Dispatch Hotline Widget */}
               <div className="bg-gradient-to-br from-[#07152b] to-slate-900 text-white rounded-2xl p-5 shadow-md">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red-400 mb-2">
-                  <AlertTriangle className="w-4 h-4 text-red-500" />
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">
+                  <AlertTriangle className="w-4 h-4 text-sky-400" />
                   <span>Immediate Technician Dispatch</span>
                 </div>
                 <h3 className="font-bold text-sm text-white mb-2">
@@ -137,7 +137,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
                 </p>
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black py-2.5 rounded-xl text-xs transition-colors shadow-md"
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black py-2.5 rounded-xl text-xs transition-colors shadow-md"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call (702) 858-1211</span>
@@ -151,9 +151,9 @@ export default function BlogPostPage({ onOpenBookingModal }) {
           <main className="lg:col-span-8 space-y-8">
             
             {/* INVERTED PYRAMID DIRECT ANSWER BLOCK (FOR AEO SNIPPET EXTRACTION) */}
-            <div className="bg-white border-l-4 border-red-600 p-6 rounded-r-2xl shadow-sm border border-y-slate-200 border-r-slate-200">
-              <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-red-700 mb-2">
-                <Sparkles className="w-4 h-4 text-red-600" />
+            <div className="bg-white border-l-4 border-sky-500 p-6 rounded-r-2xl shadow-sm border border-y-slate-200 border-r-slate-200">
+              <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-sky-700 mb-2">
+                <Sparkles className="w-4 h-4 text-sky-600" />
                 <span>Executive Summary (Direct 50-Word Takeaway):</span>
               </div>
               <p className="text-base sm:text-lg text-slate-900 leading-relaxed font-bold">
@@ -220,7 +220,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
 
             {/* AUTHOR CREDENTIALS SIGNATURE */}
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-red-600 text-white font-black flex items-center justify-center text-lg flex-shrink-0">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-white font-black flex items-center justify-center text-lg flex-shrink-0">
                 {post.author.name.charAt(0)}
               </div>
               <div className="space-y-1">
@@ -230,7 +230,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
                     Verified Pro
                   </span>
                 </div>
-                <p className="text-xs font-bold text-red-600">{post.author.title}</p>
+                <p className="text-xs font-bold text-sky-600">{post.author.title}</p>
                 <p className="text-xs text-slate-600 leading-relaxed">{post.author.bio}</p>
               </div>
             </div>
@@ -257,17 +257,17 @@ export default function BlogPostPage({ onOpenBookingModal }) {
                   <Link
                     key={other.slug}
                     to={`/knowledge-base/${other.slug}`}
-                    className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-red-400 hover:shadow-md transition-all group flex flex-col justify-between"
+                    className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all group flex flex-col justify-between"
                   >
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-wider text-red-600">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-sky-600">
                         {other.category}
                       </span>
-                      <h4 className="font-bold text-sm text-[#07152b] group-hover:text-red-600 transition-colors mt-1 line-clamp-2">
+                      <h4 className="font-bold text-sm text-[#07152b] group-hover:text-sky-600 transition-colors mt-1 line-clamp-2">
                         {other.title}
                       </h4>
                     </div>
-                    <div className="flex items-center gap-1 text-xs font-bold text-red-600 mt-3">
+                    <div className="flex items-center gap-1 text-xs font-bold text-sky-600 mt-3">
                       <span>Read guide</span>
                       <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </div>
@@ -287,7 +287,7 @@ export default function BlogPostPage({ onOpenBookingModal }) {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black px-6 py-3 rounded-xl text-sm transition-all"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black px-6 py-3 rounded-xl text-sm transition-all shadow-md active:scale-95"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call (702) 858-1211</span>

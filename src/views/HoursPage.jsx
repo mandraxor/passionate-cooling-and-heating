@@ -11,7 +11,7 @@ export default function HoursPage() {
       {/* Header */}
       <section className="bg-[#07152b] text-white py-14 sm:py-20 border-b border-slate-800 text-center relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-xs font-black uppercase tracking-wider text-red-400 bg-red-950/80 px-4 py-1.5 rounded-full border border-red-800 mb-4 inline-block">
+          <span className="text-xs font-black uppercase tracking-wider text-sky-300 bg-sky-950/80 px-4 py-1.5 rounded-full border border-sky-800 mb-4 inline-block">
             Continuous 24/7/365 Readiness
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
@@ -31,7 +31,7 @@ export default function HoursPage() {
           <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card-elevated space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-red-100 text-red-600 rounded-xl">
+                <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
@@ -52,8 +52,8 @@ export default function HoursPage() {
                   className="flex items-center justify-between py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors"
                 >
                   <span className="font-bold text-xs sm:text-sm text-slate-800">{item.day}</span>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-black text-red-600 bg-red-50 px-2.5 py-1 rounded-lg border border-red-100">
-                    <Check className="w-3.5 h-3.5 text-red-600" />
+                  <span className="inline-flex items-center gap-1.5 text-xs font-black text-sky-700 bg-sky-50 px-2.5 py-1 rounded-lg border border-sky-100">
+                    <Check className="w-3.5 h-3.5 text-sky-600" />
                     <span>Open 24 Hours</span>
                   </span>
                 </div>
@@ -72,7 +72,7 @@ export default function HoursPage() {
           <div className="lg:col-span-6 space-y-6">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card-elevated space-y-5">
               <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-                <div className="p-3 bg-red-100 text-red-600 rounded-xl">
+                <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -82,7 +82,7 @@ export default function HoursPage() {
               </div>
 
               <div>
-                <div className="text-xs uppercase font-extrabold text-red-600 tracking-wider">
+                <div className="text-xs uppercase font-extrabold text-sky-600 tracking-wider">
                   Address
                 </div>
                 <p className="text-lg font-black text-[#07152b] mt-1">
@@ -94,14 +94,14 @@ export default function HoursPage() {
               </div>
 
               <div>
-                <div className="text-xs uppercase font-extrabold text-red-600 tracking-wider">
+                <div className="text-xs uppercase font-extrabold text-sky-600 tracking-wider">
                   24/7 Telephone
                 </div>
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="text-2xl font-black text-red-600 hover:text-red-700 transition-colors inline-flex items-center gap-2 mt-1"
+                  className="text-2xl font-black text-sky-600 hover:text-sky-700 transition-colors inline-flex items-center gap-2 mt-1"
                 >
-                  <Phone className="w-6 h-6 fill-red-600" />
+                  <Phone className="w-6 h-6 fill-sky-600" />
                   <span>{BUSINESS_INFO.phone}</span>
                 </a>
               </div>
@@ -113,13 +113,13 @@ export default function HoursPage() {
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-[#07152b] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-colors"
                 >
-                  <Navigation className="w-4 h-4 text-red-500" />
+                  <Navigation className="w-4 h-4 text-sky-400" />
                   <span>Google Maps Directions</span>
                 </a>
 
                 <button
                   onClick={() => setIsBookingOpen(true)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md active:scale-95"
                 >
                   <span>Book Slot Online</span>
                   <ArrowRight className="w-4 h-4" />
@@ -130,7 +130,7 @@ export default function HoursPage() {
             {/* Quick Credentials Strip */}
             <div className="bg-[#07152b] text-white rounded-2xl p-5 border border-slate-800 flex items-center justify-between">
               <div>
-                <div className="text-xs font-black uppercase text-red-400">Nevada License</div>
+                <div className="text-xs font-black uppercase text-sky-300">Nevada License</div>
                 <div className="text-sm font-bold mt-0.5">#0088935 • EPA Universal</div>
               </div>
               <div className="text-right">

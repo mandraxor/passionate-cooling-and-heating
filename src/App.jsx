@@ -29,7 +29,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col selection:bg-red-200 selection:text-slate-900 font-sans">
+      <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col selection:bg-sky-200 selection:text-slate-900 font-sans">
         <HeaderNav onOpenBookingModal={handleOpenBooking} />
         
         <main className="flex-grow pb-16 lg:pb-0">

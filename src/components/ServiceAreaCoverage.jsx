@@ -35,8 +35,8 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-[#07152b] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4 shadow-sm">
-            <MapPin className="w-3.5 h-3.5 text-red-500" />
+          <div className="inline-flex items-center gap-2 bg-[#07152b] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4 shadow-sm border border-sky-500/30">
+            <MapPin className="w-3.5 h-3.5 text-sky-400" />
             <span>Southern Nevada Service Radius</span>
           </div>
 
@@ -70,12 +70,12 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                   setZipInput(e.target.value);
                   if (zipResult) setZipResult(null);
                 }}
-                className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
               />
             </div>
             <button
               type="submit"
-              className="bg-red-600 hover:bg-red-700 text-white font-black text-sm px-6 py-3.5 rounded-xl transition-all shadow-md active:scale-95 flex-shrink-0"
+              className="bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm px-6 py-3.5 rounded-xl transition-all shadow-md active:scale-95 flex-shrink-0"
             >
               Check Dispatch Status
             </button>
@@ -92,13 +92,13 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                   </div>
                   <div className="text-xs text-slate-700 space-y-1 pl-7">
                     <div><strong>Region:</strong> {zipResult.region}</div>
-                    <div><strong>Target Dispatch:</strong> <span className="text-red-600 font-extrabold">{zipResult.responseTime}</span></div>
+                    <div><strong>Target Dispatch:</strong> <span className="text-sky-600 font-extrabold">{zipResult.responseTime}</span></div>
                     <div><strong>Coverage Guarantee:</strong> {zipResult.tier}</div>
                   </div>
                   <div className="pt-2 pl-7 flex gap-2">
                     <button
                       onClick={() => onOpenBookingModal()}
-                      className="bg-[#07152b] hover:bg-red-600 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
+                      className="bg-[#07152b] hover:bg-sky-600 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
                     >
                       Book Dispatch to {zipInput}
                     </button>
@@ -106,7 +106,7 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                       href={`tel:${BUSINESS_INFO.phoneRaw}`}
                       className="bg-white border border-slate-300 text-slate-800 hover:bg-slate-100 text-xs font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-1.5"
                     >
-                      <Phone className="w-3.5 h-3.5 text-red-600" />
+                      <Phone className="w-3.5 h-3.5 text-sky-600" />
                       <span>(702) 858-1211</span>
                     </a>
                   </div>
@@ -138,7 +138,7 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                 onClick={() => setActiveRegion(region.id)}
                 className={`w-full p-4 rounded-xl border text-left transition-all flex items-center justify-between shadow-sm ${
                   activeRegion === region.id
-                    ? 'border-red-600 bg-white ring-2 ring-red-500/20 text-[#07152b]'
+                    ? 'border-sky-500 bg-white ring-2 ring-sky-500/20 text-[#07152b]'
                     : 'border-slate-200 bg-white/70 hover:bg-white text-slate-700'
                 }`}
               >
@@ -146,12 +146,12 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                   <div className="flex items-center gap-2">
                     <span className="font-black text-sm">{region.name}</span>
                     {region.isHeadquarters && (
-                      <span className="bg-red-600 text-white text-[9px] font-black uppercase px-2 py-0.5 rounded">
+                      <span className="bg-sky-600 text-white text-[9px] font-black uppercase px-2 py-0.5 rounded">
                         HQ Center
                       </span>
                     )}
                   </div>
-                  <div className="text-xs text-red-600 font-extrabold mt-0.5">
+                  <div className="text-xs text-sky-600 font-extrabold mt-0.5">
                     {region.leadTime}
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card-elevated space-y-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
-                <span className="text-xs font-black uppercase text-red-600">
+                <span className="text-xs font-black uppercase text-sky-600">
                   {selectedRegionData.coverageType}
                 </span>
                 <h4 className="text-2xl font-black text-[#07152b] mt-0.5">
@@ -177,7 +177,7 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
               </div>
 
               <div className="bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-red-600" />
+                <Clock className="w-4 h-4 text-sky-600" />
                 <span>{selectedRegionData.leadTime}</span>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
             {/* Headquarters Highlight Box */}
             <div className="bg-[#07152b] text-white p-5 rounded-2xl space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-black uppercase tracking-wider text-red-400">
+                <span className="text-xs font-black uppercase tracking-wider text-sky-400">
                   Primary Dispatch Facility
                 </span>
                 <span className="text-[10px] text-emerald-400 font-bold">Open 24/7/365</span>
@@ -227,13 +227,13 @@ export default function ServiceAreaCoverage({ onOpenBookingModal }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 bg-white text-[#07152b] hover:bg-slate-100 text-xs font-extrabold px-4 py-2.5 rounded-xl transition-colors"
                 >
-                  <Navigation className="w-3.5 h-3.5 text-red-600" />
+                  <Navigation className="w-3.5 h-3.5 text-sky-600" />
                   <span>Get Driving Directions</span>
                 </a>
 
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-extrabold px-4 py-2.5 rounded-xl transition-colors"
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-xs font-extrabold px-4 py-2.5 rounded-xl transition-colors shadow-md active:scale-95"
                 >
                   <Phone className="w-3.5 h-3.5 fill-white" />
                   <span>Call Dispatch (702) 858-1211</span>

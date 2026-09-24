@@ -37,7 +37,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
       case 'Snowflake':
         return <Snowflake className="w-6 h-6 text-sky-500" />;
       case 'Flame':
-        return <Flame className="w-6 h-6 text-red-500" />;
+        return <Flame className="w-6 h-6 text-amber-500" />;
       case 'Wind':
         return <Wind className="w-6 h-6 text-teal-500" />;
       case 'Droplets':
@@ -51,7 +51,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
       case 'Building2':
         return <Building2 className="w-6 h-6 text-slate-700" />;
       case 'ShieldAlert':
-        return <ShieldAlert className="w-6 h-6 text-red-600" />;
+        return <ShieldAlert className="w-6 h-6 text-sky-500" />;
       case 'Waves':
         return <Waves className="w-6 h-6 text-cyan-600" />;
       case 'PenTool':
@@ -89,8 +89,8 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-[#07152b] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          <div className="inline-flex items-center gap-2 bg-[#07152b] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-4 shadow-sm border border-sky-500/30">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
             <span>Comprehensive 17-Service Catalog Matrix</span>
           </div>
 
@@ -119,17 +119,17 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
                   }}
                   className={`min-h-[48px] px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm transition-all flex items-center gap-2 shadow-sm ${
                     isSelected
-                      ? 'bg-[#07152b] text-white ring-2 ring-red-500 shadow-md'
+                      ? 'bg-[#07152b] text-white ring-2 ring-sky-500 shadow-md'
                       : 'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200'
                   }`}
                 >
                   {category.id === 'cooling' && <Snowflake className="w-4 h-4 text-sky-400" />}
-                  {category.id === 'heating' && <Flame className="w-4 h-4 text-red-500" />}
+                  {category.id === 'heating' && <Flame className="w-4 h-4 text-amber-500" />}
                   {category.id === 'air-quality' && <Wind className="w-4 h-4 text-teal-400" />}
                   {category.id === 'plumbing' && <Droplets className="w-4 h-4 text-blue-400" />}
                   <span>{category.name}</span>
                   <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
-                    isSelected ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-600'
+                    isSelected ? 'bg-sky-600 text-white' : 'bg-slate-100 text-slate-600'
                   }`}>
                     {category.count}
                   </span>
@@ -141,7 +141,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
               onClick={() => setActiveCategory('all')}
               className={`min-h-[48px] px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all ${
                 activeCategory === 'all'
-                  ? 'bg-[#07152b] text-white ring-2 ring-red-500'
+                  ? 'bg-[#07152b] text-white ring-2 ring-sky-500'
                   : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200'
               }`}
             >
@@ -157,7 +157,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
               placeholder="Search symptoms or equipment..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 shadow-sm"
+              className="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 shadow-sm"
             />
             {searchQuery && (
               <button
@@ -174,7 +174,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
         {activeCategory !== 'all' && (
           <div className="bg-white border border-slate-200 rounded-xl p-4 mb-8 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <div>
-              <div className="text-xs font-black uppercase text-red-600">
+              <div className="text-xs font-black uppercase text-sky-600">
                 Specialty Pillar: {SERVICE_CATEGORIES.find(c => c.id === activeCategory)?.name}
               </div>
               <div className="text-sm font-semibold text-slate-700 mt-0.5">
@@ -197,13 +197,13 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
                 key={service.id}
                 className={`bg-white rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
                   service.popular
-                    ? 'border-red-500/40 shadow-card-elevated hover:shadow-card-hover'
+                    ? 'border-sky-500/50 shadow-card-elevated hover:shadow-card-hover ring-1 ring-sky-500/20'
                     : 'border-slate-200 shadow-card-elevated hover:shadow-card-hover'
                 }`}
               >
                 {/* Card Top Banner if Popular */}
                 {service.popular && (
-                  <div className="bg-gradient-to-r from-red-600 to-red-700 text-white text-[11px] font-black uppercase tracking-wider py-1 px-4 text-center">
+                  <div className="bg-gradient-to-r from-sky-600 to-blue-700 text-white text-[11px] font-black uppercase tracking-wider py-1 px-4 text-center">
                     ⭐ High Demand / Most Requested in Las Vegas
                   </div>
                 )}
@@ -221,7 +221,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
 
                   {/* Title & Badge */}
                   <div>
-                    <span className="text-[11px] font-extrabold text-red-600 uppercase tracking-wide">
+                    <span className="text-[11px] font-extrabold text-sky-600 uppercase tracking-wide">
                       {service.badge}
                     </span>
                     <h3 className="text-lg sm:text-xl font-black text-[#07152b] mt-1 leading-snug">
@@ -286,10 +286,10 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
                 <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2.5">
                   <button
                     onClick={() => onSelectServiceToBook(service.name)}
-                    className="w-full min-h-[46px] inline-flex items-center justify-center gap-2 bg-[#07152b] hover:bg-red-600 text-white font-black text-xs sm:text-sm py-2.5 px-4 rounded-xl transition-all duration-200 shadow-sm active:scale-95 group"
+                    className="w-full min-h-[46px] inline-flex items-center justify-center gap-2 bg-[#07152b] hover:bg-sky-600 text-white font-black text-xs sm:text-sm py-2.5 px-4 rounded-xl transition-all duration-200 shadow-sm active:scale-95 group"
                   >
                     <span>Book Service Online</span>
-                    <ArrowRight className="w-4 h-4 text-red-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-sky-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
                   </button>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
                 setSearchQuery('');
                 setActiveCategory('all');
               }}
-              className="mt-3 text-xs font-bold text-red-600 hover:underline"
+              className="mt-3 text-xs font-bold text-sky-600 hover:underline"
             >
               Reset search filters to see all 17 services
             </button>
@@ -317,21 +317,21 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
         <div className="mt-14 bg-gradient-to-br from-[#07152b] via-[#0b1e38] to-[#07152b] text-white rounded-3xl p-8 sm:p-12 border border-slate-700 shadow-2xl relative overflow-hidden">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-3">
-              <span className="text-xs font-black uppercase tracking-wider text-amber-400 bg-amber-950/80 px-3 py-1 rounded-md border border-amber-800">
+              <span className="text-xs font-black uppercase tracking-wider text-cyan-300 bg-sky-950/80 px-3 py-1 rounded-md border border-sky-800">
                 100% Free Second Opinion
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white">
                 Already Have an Expensive Quote From Another Vegas Contractor?
               </h3>
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Before committing to a \$12,000+ system replacement or an inflated diagnostic bill, let our licensed master technicians review it. We frequently save Las Vegas homeowners thousands of dollars by finding simple component fixes (capacitors, relays, wiring) that other companies claim require total replacement.
+                Before committing to a $12,000+ system replacement or an inflated diagnostic bill, let our licensed master technicians review it. We frequently save Las Vegas homeowners thousands of dollars by finding simple component fixes (capacitors, relays, wiring) that other companies claim require total replacement.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
               <button
                 onClick={() => onSelectServiceToBook("Free Second Opinion on Existing Quote / Diagnostic")}
-                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black text-sm py-4 px-6 rounded-xl shadow-lg transition-all active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm py-4 px-6 rounded-xl shadow-lg shadow-sky-950/40 transition-all active:scale-95 text-center"
               >
                 <span>Request Free 2nd Opinion Review</span>
                 <ArrowRight className="w-4 h-4" />
@@ -341,7 +341,7 @@ export default function InteractiveServiceMatrix({ onSelectServiceToBook }) {
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
                 className="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm py-3.5 px-6 rounded-xl border border-slate-600 transition-colors text-center"
               >
-                <Phone className="w-4 h-4 text-red-400 fill-red-400" />
+                <Phone className="w-4 h-4 text-sky-400 fill-sky-400" />
                 <span>Call (702) 858-1211</span>
               </a>
             </div>

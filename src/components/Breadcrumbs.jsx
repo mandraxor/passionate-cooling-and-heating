@@ -35,7 +35,7 @@ export default function Breadcrumbs({ items = [] }) {
               ) : (
                 <Link
                   to={item.url}
-                  className="hover:text-red-600 transition-colors flex items-center gap-1"
+                  className="hover:text-sky-600 transition-colors flex items-center gap-1"
                 >
                   {index === 0 && <Home className="w-3.5 h-3.5" />}
                   <span>{item.name}</span>

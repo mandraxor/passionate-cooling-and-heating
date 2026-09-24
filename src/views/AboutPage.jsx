@@ -28,7 +28,7 @@ export default function AboutPage() {
       {/* Header */}
       <section className="bg-[#07152b] text-white py-14 sm:py-20 border-b border-slate-800 text-center relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-red-400 bg-red-950/80 px-4 py-1.5 rounded-full border border-red-800 mb-4">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-sky-300 bg-sky-950/80 px-4 py-1.5 rounded-full border border-sky-800 mb-4">
             <Award className="w-3.5 h-3.5" />
             <span>Nevada Contractor License #0088935</span>
           </span>
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-black uppercase tracking-wider text-red-600 bg-red-50 border border-red-200 px-3 py-1 rounded-md">
+            <span className="text-xs font-black uppercase tracking-wider text-sky-700 bg-sky-50 border border-sky-200 px-3 py-1 rounded-md">
               The Passionate Standard
             </span>
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <div className="flex items-center gap-2 text-red-600 font-black text-sm">
+                <div className="flex items-center gap-2 text-sky-600 font-black text-sm">
                   <Clock className="w-4 h-4" />
                   <span>24/7 Rapid Dispatch</span>
                 </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-xs font-bold text-red-600 uppercase">
+                    <div className="text-xs font-bold text-sky-600 uppercase">
                       5.0 Star Rated Local Contractor
                     </div>
                     <div className="text-sm font-black text-[#07152b] mt-0.5">
@@ -147,7 +147,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-black">1</div>
+            <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-black">1</div>
             <h4 className="text-base font-black text-[#07152b]">100% Upfront Pricing</h4>
             <p className="text-xs text-slate-600 leading-relaxed">
               We diagnose the exact failure and give you a written flat-rate quote before turning a wrench. No surprise billing.
@@ -183,7 +183,7 @@ export default function AboutPage() {
         <div className="mt-14 text-center">
           <button
             onClick={() => setIsBookingOpen(true)}
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-black text-sm px-8 py-4 rounded-xl shadow-lg transition-all active:scale-95"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm px-8 py-4 rounded-xl shadow-lg transition-all active:scale-95"
           >
             <span>Request Free In-Home Consultation</span>
             <ArrowRight className="w-4 h-4" />

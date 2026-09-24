@@ -8,10 +8,10 @@ export default function MobileBar({ onOpenBookingModal }) {
       {/* 1. Direct Call Now Button */}
       <a
         href={`tel:${BUSINESS_INFO.phoneRaw}`}
-        className="flex-[1.2] min-h-[48px] inline-flex items-center justify-center gap-2 bg-red-600 active:bg-red-700 text-white font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl shadow-lg transition-all text-center"
+        className="flex-[1.2] min-h-[48px] inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 active:from-sky-600 active:to-blue-700 text-white font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl shadow-lg shadow-sky-950/40 transition-all text-center"
       >
         <span className="relative flex h-2 w-2 flex-shrink-0">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
         </span>
         <Phone className="w-4 h-4 fill-white flex-shrink-0" />
@@ -21,9 +21,9 @@ export default function MobileBar({ onOpenBookingModal }) {
       {/* 2. Book Online Trigger */}
       <button
         onClick={() => onOpenBookingModal()}
-        className="flex-1 min-h-[48px] inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-sky-500 to-blue-600 active:from-sky-600 active:to-blue-700 text-white font-bold text-xs sm:text-sm py-2.5 px-2 rounded-xl transition-all text-center shadow-md"
+        className="flex-1 min-h-[48px] inline-flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 border border-sky-400/30 text-white font-bold text-xs sm:text-sm py-2.5 px-2 rounded-xl transition-all text-center shadow-md"
       >
-        <Calendar className="w-4 h-4 text-white flex-shrink-0" />
+        <Calendar className="w-4 h-4 text-cyan-300 flex-shrink-0" />
         <span className="truncate">Book Online</span>
       </button>
 
